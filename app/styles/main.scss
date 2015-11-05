@@ -1,0 +1,237 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,700italic,500italic,900,900italic);
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$dist-xxl: 128px;
+$dist-xl: 64px;
+$dist-l: 32px;
+$dist-m: 16px;
+$dist-s: 8px;
+$dist-xs: 4px;
+$dist-xxs: 2px;
+
+$colr-a1: #374A44;
+$colr-a2: #698C81;
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+body, html {
+  padding: 0;
+  margin: 0; }
+
+body { background: $colr-a2; }
+
+* { color: #fff; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; }
+p, a, li, td, th { font-family: 'Roboto', sans-serif; }
+
+a,
+.politiker__liste td a:hover { color: #fff; text-decoration: none; }
+a:hover,
+.politiker__liste td a:hover { opacity: 0.7; text-decoration: none; cursor: pointer; }
+
+.header {
+  // border-bottom: 1px solid #e5e5e5;
+  padding-bottom: $dist-s; }
+
+.menu li {
+  display: inline-block;
+  padding: $dist-m; }
+
+.menu li a { color: #fff; font-weight: 600; font-family: 'Oswald';}
+
+.header__logo {
+  height: 40px;
+  margin-right: $dist-s;
+  margin-top: -$dist-xs; }
+
+.folketingssal__bg {
+  position: absolute;
+  width: 100%;
+  z-index: -1; }
+
+.politikerhold { list-style: none; }
+
+.politikerhold li {
+  display: inline-block;
+  list-style: none;
+  padding: $dist-m;
+  color: #fff;
+  text-align: center;
+  width: $dist-xxl;
+  height: $dist-xxl;
+  position: relative; }
+
+.politiker__raekke {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto; }
+#politiker__raekke--1 { width: 80%; }
+#politiker_02, #politiker_05 { margin-top: 90px; }
+#politiker_01, #politiker_06 { margin-top: 180px; }
+
+.politiker { width: 400px; }
+
+.politiker__partilogo {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 40px; }
+
+.politiker__ansigt {
+  position: absolute;
+  top: $dist-s;
+  left: $dist-m;
+  width: 60px; }
+
+.politiker__navn {
+  font-size: 13px;
+  position: relative;
+  top: 70px;
+  left: -16px;
+  text-align: center;
+  line-height: 16px; }
+
+.politiker__pris {
+  font-size: 11px;
+  font-weight: 800;
+  position: relative;
+  top: 64px;
+  left: -8px;
+  text-align: center;
+  width: 80px; }
+
+.politiker__liste {
+  display: block;
+  height: 330px;
+  overflow-y: scroll;
+  -moz-box-shadow:    inset  0  8px 8px -8px $colr-a1,
+                      inset  0 -8px 8px -8px $colr-a1;
+  -webkit-box-shadow: inset  0  8px 8px -8px $colr-a1,
+                      inset  0 -8px 8px -8px $colr-a1;
+  box-shadow:         inset  0  8px 8px -8px $colr-a1,
+                      inset  0 -8px 8px -8px $colr-a1; }
+
+.politiker__liste tbody {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-right: 15px; }
+
+.politiker__liste td { padding: $dist-m; }
+
+.politiker__liste__titel {
+  background: $colr-a1;
+  padding: $dist-m;
+  margin: 0; }
+
+.politiker__liste thead {
+  background: $colr-a1;
+  border-top: 1px solid $colr-a2;
+  border-bottom: 1px solid $colr-a2; }
+
+.politiker__liste thead td {
+  padding: $dist-s $dist-m; }
+
+.liste__politiker__tilfoj {
+  font-weight: 900;
+  background: $colr-a1;
+  padding: $dist-m;
+  margin-right: $dist-s;
+  border-bottom: 1px solid $colr-a2;
+  cursor: pointer; }
+
+.liste__politiker__tilfoj:hover { background: $colr-a2; }
+
+.liste__politiker__pris { min-width: 80px; }
+
+/* politiker_info.html */
+.politiker__info__wrap {
+  padding-left: 0; }
+
+.politiker__info__titel {
+  background: $colr-a1;
+  padding: $dist-m;
+  margin: 0; }
+
+.politiker__info__titel span {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: $colr-a2;
+  padding-left: $dist-m; }
+
+.politiker__info__ansigt {
+  position: absolute;
+  width: 128px;
+  right: -20px;
+  top: -20px; }
+
+.politiker__info__logo {
+  position: absolute;
+  width: 128px;
+  right: -100px;
+  top: -30px; }
+
+.politiker__info td {
+  padding: $dist-m;
+  border-bottom: 1px solid $colr-a1; }
+
+.politiker__info__vaerdi { text-align: right; }
+
+.politiker__info__tilfoj { background: $colr-a1; text-align: center; }
+.politiker__info__tilfoj:hover { background: $colr-a2; cursor: pointer; }
+
+.artikler_sektion {
+  margin-top: $dist-xxl; }
+
+.artikler_wrap {
+  position: relative;
+  height: 400px;
+  overflow-y: scroll; }
+
+.artikler { width: 100%; }
+
+/* regler_og_point.html */
+.pointsystem__wrap {
+  padding-left: 0; }
+
+.pointsystem__vaerdi { text-align: right; }
+
+.pointsystem__titel {
+  background: $colr-a1;
+  padding: $dist-m;
+  margin: 0; }
+
+.pointsystem__titel span {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: $colr-a2;
+  padding-left: $dist-m; }
+
+.pointsystem td {
+  padding: $dist-m;
+  border-bottom: 1px solid $colr-a1; }
+// .pointsystem tr:first-child td { padding-top: $dist-l; }
+
+.vaerdi__negativ { color: #FFA6A9; }
+
+/* bliv_klogere.html */
+.altinget_dk__wrap {
+  height: 600px;
+padding-left: 0; }
+
+.altinget_dk__wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {}
