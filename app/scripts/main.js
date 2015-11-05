@@ -24,4 +24,8 @@ $( document ).ready( function() {
 		}
 	});
 
+	$( '.fb_overlay__clickbox' ).on( 'click', function() {
+		$( '.fb_overlay' ).hide();
+	});
+
 });

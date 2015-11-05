@@ -53,10 +53,34 @@ a:hover,
   margin-right: $dist-s;
   margin-top: -$dist-xs; }
 
+.fb_overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto; }
+
+.fb_overlay img { width: 100%; }
+
+.fb_overlay__clickbox {
+  width: 38%;
+  height: 50%;
+  background: blue;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 14%;
+  left: 19%;
+  cursor: pointer; }
+
 .folketingssal__bg {
   position: absolute;
   width: 100%;
   z-index: -1; }
+
+.budget {
+  position: absolute;
+  color: $colr-a2;
+  margin: $dist-m; }
 
 .politikerhold { list-style: none; }
 
@@ -74,7 +98,7 @@ a:hover,
   display: flex;
   justify-content: space-around;
   margin: 0 auto; }
-#politiker__raekke--1 { width: 80%; }
+#politiker__raekke--1 { width: 100%; }
 #politiker_02, #politiker_05 { margin-top: 90px; }
 #politiker_01, #politiker_06 { margin-top: 180px; }
 
@@ -90,7 +114,7 @@ a:hover,
   position: absolute;
   top: $dist-s;
   left: $dist-m;
-  width: 60px; }
+  height: 80px; }
 
 .politiker__navn {
   font-size: 13px;
@@ -170,15 +194,15 @@ a:hover,
 
 .politiker__info__ansigt {
   position: absolute;
-  width: 128px;
+  width: 76px;
   right: -20px;
   top: -20px; }
 
 .politiker__info__logo {
   position: absolute;
-  width: 128px;
-  right: -100px;
-  top: -30px; }
+  width: 80px;
+  right: -70px;
+  top: -25px; }
 
 .politiker__info td {
   padding: $dist-m;
@@ -234,4 +258,44 @@ padding-left: 0; }
   border: none; }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+  .politiker__info__ansigt {
+    position: absolute;
+    width: 128px;
+    right: -20px;
+    top: -20px; }
+
+  .politiker__info__logo {
+    position: absolute;
+    width: 128px;
+    right: -100px;
+    top: -30px; }
+}
+
+@media screen and (min-width: 992px) {
+  .politiker__info__ansigt {
+    position: absolute;
+    width: 76px;
+    right: -20px;
+    top: -20px; }
+
+  .politiker__info__logo {
+    position: absolute;
+    width: 80px;
+    right: -70px;
+    top: -25px; }
+}
+
+@media screen and (min-width: 1200px) {
+  .politiker__info__ansigt {
+  position: absolute;
+  width: 128px;
+  right: -20px;
+  top: -20px; }
+
+.politiker__info__logo {
+  position: absolute;
+  width: 128px;
+  right: -100px;
+  top: -30px; }
+}
